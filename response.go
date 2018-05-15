@@ -14,6 +14,10 @@ type Response struct {
 	buf  smallBuf
 }
 
+func (resp *Response) getRaw() ([]byte) {
+	return resp.buf.b
+}
+
 func (resp *Response) fill(b []byte) {
 	resp.buf.b = b
 }
